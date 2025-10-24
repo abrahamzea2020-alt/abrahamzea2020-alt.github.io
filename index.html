@@ -102,19 +102,19 @@
       box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
     }
   </style>
-  
-  <!-- PushAlert -->
-<script type="text/javascript">
-        (function(d, t) {
-                var g = d.createElement(t),
-                s = d.getElementsByTagName(t)[0];
-                g.src = "https://cdn.pushalert.co/integrate_dda80c7aac8e088552275fb6d363767b.js";
-                s.parentNode.insertBefore(g, s);
-        }(document, "script"));
-</script>
-<!-- End PushAlert -->
-  
+
+  <!-- 🚀 OneSignal Web Push SDK -->
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function(OneSignal) {
+      await OneSignal.init({
+        appId: "decc3cb5-d5a2-4917-82ad-9a9b5d0108cc",
+      });
+    });
+  </script>
 </head>
+
 <body>
   <header>
     <img src="logo-ie1150.jpg" alt="Logo IE N°1150">
@@ -151,15 +151,6 @@
     &copy; 2025 Institución Educativa N°1150 - Todos los derechos reservados.
   </footer>
   
-<!-- PushAlert Onsite Messaging -->
-<script type="text/javascript">
-    (function(d, t) {
-        var g = d.createElement(t),
-        s = d.getElementsByTagName(t)[0];
-        g.src = "https://cdn.inwebr.com/inwebr_12953525fbd65792f53feaffc2442001.js";
-        s.parentNode.insertBefore(g, s);
-    }(document, "script"));
-</script>
-<!-- End PushAlert Onsite Messaging -->
+
 </body>
 </html>
